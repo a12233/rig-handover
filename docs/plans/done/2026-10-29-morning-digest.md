@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-11-02
 ---
 
 # Morning digest
@@ -77,3 +78,18 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| 1 | Digest types: src/digest/types.ts | — | opencode · opus-5.5 · medium | 2026-11-02 |
+| 2 | Run log reader: readNight in src/digest/ | #1 | opencode · opus-5.5 · medium | 2026-11-02 |
+| 3 | Digest page: GET /digest/:night | #1 (close: #2) | opencode · sonnet-5.5 · low | 2026-11-02 |
+| 4 | Digest JSON: GET /api/digest/:night | #1 (close: #2, #3) | opencode · sonnet-5.5 · low | 2026-11-02 |
+| 5 | Board link: each night to its digest, with counts | #1 (close: #2, #3) | opencode · sonnet-5.5 · low | 2026-11-02 |
+| 6 | Route tests for the digest page and JSON | #1 (close: #3, #4) | opencode · sonnet-5.5 · low | 2026-11-02 |
+| 7 | Preview for review: public HTML copy of /digest/2026-10-28 | #2–#6 | opencode · opus-5.5 · medium | 2026-11-02 |
+| 8 | Clean up: preview without lane marker, plan to done | #7, the review | opencode · opus-5.5 · medium | 2026-11-02 |
+
+#7 was closed once when the link was sent, before the reviewer had looked; it was reopened and closed again after the review was in. The marked upload's own surge revision link was discarded along with the re-upload, so no copy with the marker stays public.
